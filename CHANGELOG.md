@@ -1,0 +1,21 @@
+# Changelog
+
+- Initial framework bootstrap.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
+- Improved support for shared library wrapper.
