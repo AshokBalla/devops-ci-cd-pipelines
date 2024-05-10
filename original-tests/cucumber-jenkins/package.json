@@ -1,0 +1,26 @@
+{
+    "name": "cucumber-jenkins",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "cucumber-js --format html:reports/cucumber_report.html --format json:reports/cucumber_report.json --format summary",
+        "test:jira": "npm test && node generateReports.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "description": "Cucumber + Jenkins test automation project",
+    "devDependencies": {
+        "@cucumber/cucumber": "^11.2.0",
+        "puppeteer": "^24.6.1"
+    },
+    "dependencies": {
+        "@cucumber/cucumber": "^11.2.0",
+        "axios": "^1.6.0",
+        "cucumber-html-reporter": "^7.1.0",
+        "dotenv": "^16.3.1",
+        "form-data": "^4.0.0",
+        "json2csv": "^5.0.7"
+    }
+}

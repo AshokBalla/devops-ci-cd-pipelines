@@ -1,0 +1,84 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Preparation') {
+            steps {
+                script {
+                    cleanWs()
+                }
+            }
+        }
+
+        stage('Debug Workspace') {
+            steps {
+                script {
+                    sh 'ls -R'
+                }
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    sh '''
+                        export PATH=$PATH:/Users/ashokballa/Library/Python/3.9/bin
+                        python3 -m pip install --upgrade pip
+                        pip install -r sampletest/requirements.txt
+                    '''
+                }
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                script {
+                    sh 'python3 sampletest/test.py'
+                }
+            }
+        }
+
+        stage('Generate Reports') {
+            steps {
+                script {
+                    sh '''
+                        mkdir -p reports
+                        cp sampletest/report.xml reports/
+                    '''
+                }
+            }
+        }
+
+        // Archive test reports
+        stage('Archive Reports') {          
+            steps {
+                script {
+                    archiveArtifacts artifacts: 'reports/**', allowEmptyArchive: true
+                }
+            }
+        }
+
+        // Publish test results
+        stage('Publish Test Results') {
+            steps {
+                script {
+                    junit 'reports/report.xml'
+                }
+            }
+        }
+
+        stage('Clean Workspace') {
+            steps {
+                script {
+                    cleanWs()
+                }
+            }
+        }   
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}

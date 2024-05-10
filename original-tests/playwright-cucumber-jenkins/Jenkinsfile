@@ -1,0 +1,156 @@
+pipeline {
+    agent any
+    
+    tools {
+        nodejs 'NodeJS'
+    }
+    
+    parameters {
+        string(name: 'JIRA_ISSUE_KEY', defaultValue: '', description: 'Jira Issue Key (e.g., TEST-123)')
+        choice(name: 'TEST_SUITE', choices: ['all', 'login', 'dailyData', 'formDetails'], description: 'Test suite to run')
+    }
+    
+    environment {
+        JIRA_BASE_URL = credentials('jira-base-url')
+        JIRA_EMAIL = credentials('jira-email')
+        JIRA_API_TOKEN = credentials('jira-api-token')
+        JIRA_PROJECT_KEY = 'TEST'
+        NODE_ENV = 'production'
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+                script {
+                    if (params.JIRA_ISSUE_KEY) {
+                        env.JIRA_ISSUE_KEY = params.JIRA_ISSUE_KEY
+                    }
+                }
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                sh '''
+                    echo "Installing dependencies..."
+                    npm ci
+                '''
+            }
+        }
+        
+        stage('Load Environment Variables') {
+            steps {
+                sh '''
+                    echo "Loading environment variables..."
+                    if [ -f .env ]; then
+                        export $(cat .env | grep -v '^#' | xargs)
+                    fi
+                '''
+            }
+        }
+        
+        stage('Run Tests') {
+            steps {
+                script {
+                    def testCommand = params.TEST_SUITE == 'all' ? 'npm test' : "npm test -- --grep '${params.TEST_SUITE}'"
+                    sh """
+                        echo "Running ${params.TEST_SUITE} tests..."
+                        ${testCommand} || true
+                    """
+                }
+            }
+            post {
+                always {
+                    // Archive test results
+                    archiveArtifacts artifacts: 'reports/**/*', allowEmptyArchive: true
+                }
+            }
+        }
+        
+        stage('Generate Reports') {
+            steps {
+                sh '''
+                    echo "Generating reports..."
+                    if [ -f generateReports.js ]; then
+                        node generateReports.js || true
+                    fi
+                '''
+            }
+        }
+        
+        stage('Publish Reports') {
+            steps {
+                publishHTML([
+                    reportName: 'Cucumber Test Report',
+                    reportDir: 'reports',
+                    reportFiles: 'cucumber_report.html',
+                    reportTitles: 'Test Execution Report',
+                    keepAll: true,
+                    alwaysLinkToLastBuild: true
+                ])
+            }
+        }
+        
+        stage('Update Jira') {
+            when {
+                expression { params.JIRA_ISSUE_KEY != '' }
+            }
+            steps {
+                script {
+                    def buildStatus = currentBuild.result ?: 'SUCCESS'
+                    def jiraStatus = buildStatus == 'SUCCESS' ? 'Done' : 'To Do'
+                    def comment = """
+                        Test Execution Completed
+                        
+                        Build Number: ${env.BUILD_NUMBER}
+                        Status: ${buildStatus}
+                        Test Suite: ${params.TEST_SUITE}
+                        Build URL: ${env.BUILD_URL}
+                        
+                        Check the test report for detailed results.
+                    """
+                    
+                    try {
+                        // Update Jira issue using Jira plugin
+                        jiraUpdateIssue(
+                            issueKey: params.JIRA_ISSUE_KEY,
+                            status: jiraStatus,
+                            comment: comment
+                        )
+                        
+                        // Attach HTML report if exists
+                        if (fileExists('reports/cucumber_report.html')) {
+                            jiraUploadAttachment(
+                                issueKey: params.JIRA_ISSUE_KEY,
+                                filePath: 'reports/cucumber_report.html'
+                            )
+                        }
+                        
+                        echo "Successfully updated Jira issue ${params.JIRA_ISSUE_KEY}"
+                    } catch (Exception e) {
+                        echo "Failed to update Jira: ${e.getMessage()}"
+                        // Continue build even if Jira update fails
+                    }
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            // Clean up
+            cleanWs()
+        }
+        success {
+            echo "Build succeeded!"
+        }
+        failure {
+            echo "Build failed!"
+        }
+        unstable {
+            echo "Build unstable!"
+        }
+    }
+}
+

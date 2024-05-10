@@ -1,0 +1,152 @@
+# Maintenance Log
+
+- Initial framework setup for jenkins-automation-pipelines
+- Add baseline documentation and repository hygiene for jenkins-automation-pipelines
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
+- refactor(jenkins-automation-pipelines): refresh reusable data for email summary template
+- chore(jenkins-automation-pipelines): record maintenance update for shared library wrapper
+- test(jenkins-automation-pipelines): add smoke coverage for nightly browser matrix
+- test(jenkins-automation-pipelines): expand regression suite for smoke pipeline template
+- feat(jenkins-automation-pipelines): add reusable workflow support for docker agent bootstrap
+- docs(jenkins-automation-pipelines): document execution behavior for artifact retention policy
+- chore(jenkins-automation-pipelines): extend environment controls for parallel ui and api stages
+- ci(jenkins-automation-pipelines): publish diagnostics for slack notification content
